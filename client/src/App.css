@@ -1,0 +1,62 @@
+header h1{
+  margin: 20px;
+}
+
+.first-col{
+  max-width: 500px;
+}
+
+.list-section ul{
+  width: 367px;
+}
+
+.list-group-item button{
+  float: right
+}
+
+.list-group-item div{
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 5px
+}
+
+.list-section{
+  margin: 20px;
+  text-align: left;
+}
+
+.list-section .form-section{
+  margin: 40px 0 0 0;
+}
+
+.list-section input{
+  width: 300px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+
+.card{
+  width: 600px;
+  margin: 20px;
+}
+
+.url{
+  color: blue;
+}
+
+.profile{
+  position: absolute;
+  right: 5px;
+}
+
+.profile img{
+  width: 60px;
+  height: 60px;
+  display: block;
+}
+
+.profile a{
+  position: relative;
+  right: 13px;
+}
