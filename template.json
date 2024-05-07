@@ -145,8 +145,8 @@
                             "provisioningState": "InProgress"
                         },
                         "repo": {
-                            "url": "https://github.com/shimedh/todo",
-                            "branch": "main"
+                            "url": "[parameters('repoUrl')]",
+                            "branch": "[parameters('branch')]"
                         },
                         "metaData": {
                             "sku": "Standard",
@@ -256,8 +256,8 @@
                             "provisioningState": "InProgress"
                         },
                         "repo": {
-                            "url": "https://github.com/shimedh/todo",
-                            "branch": "main"
+                            "url": "[parameters('repoUrl')]",
+                            "branch": "[parameters('branch')]"
                         },
                         "metaData": {
                             "type": "Microsoft.App/containerapps",
