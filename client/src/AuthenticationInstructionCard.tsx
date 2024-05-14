@@ -10,8 +10,12 @@ const AuthenticationInstructionCard = (props: AuthInstructionCardProps) => {
           <h5 className="card-title">Authentication</h5>
           <h6 className="card-subtitle mb-2 text-body-secondary">How to setup authentication with Google</h6>
           <ol>
-            <li>Create or select an existing project in <a href="https://console.cloud.google.com/">Google Cloud</a></li>
-            <li>Go to "APIs & Services" -&gt; "Credentials"</li>
+            <li>Create a new project in <a href="https://console.cloud.google.com/" target="_blank" rel="noreferrer">Google Cloud</a></li>
+            <li>Go to "APIs & Services" -&gt; "OAuth consent screen"</li>
+            <li>Set user type to "External"</li>
+            <li>Add an authorized domain for <span className='url'>{window.location.host}</span></li>
+            <li>Skip the scopes and test users section for now to complete the setup</li>
+            <li>Go to "Credentials"</li>
             <li>Create a new OAuth Client ID credential for a Web Application</li>
             <li>Add an authorized origin: <span className='url'>{window.location.origin}</span></li>
             <li>Add an authorized redirect uri: <span className='url'>{window.location.origin}/.auth/login/google/callback</span></li>
