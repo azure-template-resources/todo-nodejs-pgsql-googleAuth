@@ -605,7 +605,7 @@
                     "resources": [
                         {
                             "type": "Microsoft.App/containerApps/sourcecontrols",
-                            "name": "[parameters('containerAppName')]/current",
+                            "name": "[concat(parameters('containerAppName'), '/current')]",
                             "apiVersion": "2023-04-01-preview",
                             "properties": {
                                 "repoUrl": "[parameters('repoUrl')]",
