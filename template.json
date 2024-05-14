@@ -446,33 +446,7 @@
                     }
                 },
                 "workloadProfileName": "Consumption"
-            },
-            "resources": [
-                {
-                    "type": "sourcecontrols",
-                    "apiVersion": "2023-04-01-preview",
-                    "name": "current",
-                    "dependsOn": [
-                        "[concat('Microsoft.App/containerapps/', parameters('containerAppName'))]",
-                        "[concat('Microsoft.ManagedIdentity/userAssignedIdentities/', parameters('oidcUserIdentity'))]"
-                    ],
-                    "properties": {
-                        "repoUrl": "[parameters('repoUrl')]",
-                        "branch": "[parameters('branch')]",
-                        "gitHubActionConfiguration": {
-                            "githubPersonalAccessToken": "[parameters('repositoryToken')]",
-                            "azureCredentials": {
-                                "clientId": "[reference(resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', parameters('oidcUserIdentity')), '2018-11-30').clientId]",
-                                "subscriptionId": "[subscription().subscriptionId]",
-                                "tenantId": "[reference(resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', parameters('oidcUserIdentity')), '2018-11-30').tenantId]",
-                                "kind": "federated"
-                            },
-                            "image": "[concat('default/', parameters('containerAppName'))]",
-                            "contextPath": "./server"
-                        }
-                    }
-                }
-            ]
+            }
         },
         {
             "type": "Microsoft.ManagedIdentity/userAssignedIdentities",
@@ -608,6 +582,45 @@
                                     ]
                                 },
                                 "workloadProfileName": "Consumption"
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Resources/deployments",
+            "apiVersion": "2015-01-01",
+            "name": "acasourcecontrols",
+            "dependsOn": [
+                "[concat('Microsoft.Resources/deployments/acadbconnection')]"
+            ],
+            "properties": {
+                "mode": "Incremental",
+                "parameters": {},
+                "template": {
+                    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+                    "contentVersion": "1.0.0.0",
+                    "parameters": {},
+                    "resources": [
+                        {
+                            "type": "Microsoft.App/containerApps/sourcecontrols",
+                            "name": "[parameters('containerAppName')]/current",
+                            "apiVersion": "2023-04-01-preview",
+                            "properties": {
+                                "repoUrl": "[parameters('repoUrl')]",
+                                "branch": "[parameters('branch')]",
+                                "gitHubActionConfiguration": {
+                                    "githubPersonalAccessToken": "[parameters('repositoryToken')]",
+                                    "azureCredentials": {
+                                        "clientId": "[reference(resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', parameters('oidcUserIdentity')), '2018-11-30').clientId]",
+                                        "subscriptionId": "[subscription().subscriptionId]",
+                                        "tenantId": "[reference(resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', parameters('oidcUserIdentity')), '2018-11-30').tenantId]",
+                                        "kind": "federated"
+                                    },
+                                    "image": "[concat('default/', parameters('containerAppName'))]",
+                                    "contextPath": "./server"
+                                }
                             }
                         }
                     ]
