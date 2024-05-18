@@ -1,5 +1,5 @@
 # About this Todo app
-This is a sample Todo application which is meant to help you learn how to build a full-stack application with authentication and authorization. The front-end is a static app built using React and the backend is an API application running on express.js which talks to a Postgres database.  To simplify the deployment of this application in the cloud, I recommend using [Azure App Spaces](#) which will host the front-end on Azure Static Web Apps, and the back-end on Azure Container Apps.
+This is a sample Todo application which is meant to help you learn how to build a full-stack application with authentication and authorization. The front-end is a static app built using React and the backend is an API application running on express.js which talks to a Postgres database.  To simplify the deployment of this application in the cloud, I recommend using [App Spaces](https://learn.microsoft.com/en-us/azure/app-spaces/overview) which will host the front-end on Azure Static Web Apps, and the back-end on Azure Container Apps.
 
 # Running the Todo app locally
 Prerequisites:
@@ -75,6 +75,6 @@ swa start http://localhost:3000 --api-devserver-url http://localhost:3001 -w ~/t
 To learn more about the end-to-end of how this application was built, you can learn more in the [walkthrough](#).
 
 Other references:
-- [Learn about Azure App Spaces](#) - Simplifies the deployment and management of multiple services in the Azure Portal
+- [Learn about App Spaces](https://learn.microsoft.com/en-us/azure/app-spaces/overview) - Simplifies the deployment and management of multiple services in the Azure Portal
 - [Learn about Azure Static Web App](https://learn.microsoft.com/en-us/azure/static-web-apps/overview) - A service optimized for hosting static web content.
 - [Learn more about Azure Container Apps](https://learn.microsoft.com/en-us/azure/container-apps/overview) - A service optimized to to simplify the running of containers backed by the power of Kubernetes.
