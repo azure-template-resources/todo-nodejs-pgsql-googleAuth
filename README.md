@@ -52,6 +52,8 @@ And lastly, let's start the SWA CLI which will act as a proxy between your clien
 swa start http://localhost:3000 --api-devserver-url http://localhost:3001 -w ~/todo/client
 ```
 
+Once the SWA emulator is running, you just need to open your browser to <b>http://localhost:4280</b>.
+
 ### Setting up Authentication and Authorization
 If you've made it this far, follow the steps in the Todo application to setup authentication and authorization.  When you get to the part where you need to set the clientId and clientSecret, you'll just need to set those as environment variables before running the SWA emulator since you won't be able to use the Azure Portal to handle this for you.
 
