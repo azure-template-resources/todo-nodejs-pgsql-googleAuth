@@ -1,6 +1,8 @@
 # About this Todo app
 This is a sample Todo application which is meant to help you learn how to build a full-stack application with authentication and authorization. The front-end is a static app built using React and the backend is an API application running on express.js which talks to a Postgres database.  To simplify the deployment of this application in the cloud, I recommend using [App Spaces](https://learn.microsoft.com/en-us/azure/app-spaces/overview) which will host the front-end on Azure Static Web Apps, and the back-end on Azure Container Apps.
 
+To learn more about how this app works end-to-end, checkout this [blog post](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/app-spaces-building-a-full-stack-app-with-google-authentication/ba-p/4141994).
+
 # Running the Todo app locally
 Prerequisites:
 
