@@ -30,6 +30,7 @@ const AuthorizationInstructionCard = (props: AuthInstructionCardProps) => {
             <li>Click <a href={userInfoUrl} target="_blank" rel="noreferrer">here</a> to confirm that you're currently not assigned the "contributor" user role under the userRoles property.</li>
             <li>Login to <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a> and find the repository under your account hosting this app</li>
             <li>Open the file under /server/app.js</li>
+            <li>Click on the little pen icon on the top-right to edit the file.</li>
             <li>Uncomment the code within the getRoles function and replace 'yourGoogleAlias' with your own</li>
             <li>Commit your changes and wait for them to build and deploy</li>
             <li>Logout and refresh the page, then retry to update the list. If everything went well, it should work now.</li>
