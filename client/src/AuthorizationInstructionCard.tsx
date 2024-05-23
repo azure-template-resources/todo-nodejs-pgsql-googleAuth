@@ -35,7 +35,7 @@ const AuthorizationInstructionCard = (props: AuthInstructionCardProps) => {
             <li>Commit your changes and wait for them to build and deploy</li>
             <li>Logout and refresh the page, then retry to update the list. If everything went well, it should work now.</li>
           </ol>
-          <a href={window.location.origin} className="card-link">Learn more</a>
+          <a href="https://go.microsoft.com/fwlink/?linkid=2272184" className="card-link" target="_blank" rel="noreferrer">Learn more</a>
         </div>
       </section>
     }
