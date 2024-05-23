@@ -22,7 +22,7 @@ const AuthenticationInstructionCard = (props: AuthInstructionCardProps) => {
             <li>Hit "Create" and copy the client ID and client secret.  NOTE: Make sure you keep these safe!</li>
             <li>Go to the Azure portal and paste your Google ClientId and ClientSecret in the Authentication settings for your front-end Static App.</li>
           </ol>
-          <a href={window.location.origin} className="card-link" target="_blank" rel="noreferrer">Learn more</a>
+          <a href="https://go.microsoft.com/fwlink/?linkid=2272184" className="card-link" target="_blank" rel="noreferrer">Learn more</a>
         </div>
       </section>
     }
