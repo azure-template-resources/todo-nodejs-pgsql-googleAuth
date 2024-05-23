@@ -7,7 +7,7 @@ export interface AuthInstructionCardProps {
 const AuthorizationInstructionCard = (props: AuthInstructionCardProps) => {
   const tryUpdateDescription = `Now try adding or deleting an item from the list. If you haven't yet configured authorization, this should fail.`;
 
-  const noAccessDescription = `Oops! Looks like you don't have permission to write to the list yet. To update the list, 
+  const noAccessDescription = `Not so fast! We haven't setup your permission to be able to write to the list yet. For that, 
   you'll need the "contributor" role which is defined in your staticwebapp.config.json file.  You can also view and update the role definition
   via the "Routes" feature in the Azure Portal.  Here's how to give yourself "contributor" role access:`;
 
