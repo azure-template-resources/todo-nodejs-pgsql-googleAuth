@@ -454,7 +454,7 @@
                     "name": "current",
                     "dependsOn": [
                         "[concat('Microsoft.App/containerapps/', parameters('containerAppName'))]",
-                        "[concat('Microsoft.ManagedIdentity/userAssignedIdentities/', parameters('oidcUserIdentity'))]",
+                        "[concat('Microsoft.Authorization/roleAssignments/', parameters('oidcRbacNameToResourceGroup'))]",
                         "[concat('Microsoft.Resources/deployments/acadbconnection')]"
                     ],
                     "properties": {
